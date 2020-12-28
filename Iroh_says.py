@@ -9,7 +9,7 @@ iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
 client = discord.Client()
 bot = commands.Bot(command_prefix='!')
 
-@bot.command(name='iroh_says')
+@bot.command(name='roh')
 async def iroh_says(ctx):
     response = random.choice(iroh_quotes)
     await ctx.send(response)
