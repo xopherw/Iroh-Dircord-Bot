@@ -28,6 +28,7 @@ async def on_message(message):
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
     await isLunar.start()
+    await timer.start()
 
 @tasks.loop(minutes=1)
 async def isLunar():
@@ -37,6 +38,11 @@ async def isLunar():
         await vegan_day(lunar, now)
     elif(now.hour == 0 and now.minute == 0):
         await other_day(lunar, now)
+        
+@tasks.loop(seconds=8)
+async def timer():
+    now = dt.datetime.now()
+    print(now.time())
 
 while(True):
     try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
