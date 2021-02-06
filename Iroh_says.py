@@ -1,4 +1,4 @@
-import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, asyncio
+import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, asyncio, os
 from discord.ext import tasks
 
 path = pathlib.Path('iroh.csv')
@@ -39,7 +39,7 @@ async def isLunar():
         await other_day(lunar, now)
 
 while(True):
-    try: client.loop.run_until_complete(client.run('TOKEN'))
+    try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
     except Exception:
         print("Reconnecting, please hold...")
         time.sleep(5)
