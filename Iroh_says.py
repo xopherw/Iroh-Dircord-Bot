@@ -1,4 +1,4 @@
-import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, asyncio, os
+import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, asyncio
 from discord.ext import tasks
 
 path = pathlib.Path('iroh.csv')
