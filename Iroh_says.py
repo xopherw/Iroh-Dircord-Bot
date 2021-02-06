@@ -8,12 +8,12 @@ client = discord.Client()
 
 async def vegan_day(lunar):
     await client.wait_until_ready()
-    channel = await client.fetch_user(int(266031018295689226))
+    channel = await client.fetch_user(int('DISCORD USER ID WITHOUT QUOTATION MARK'))
     await channel.send(f'Today is month {lunar.month} and day {lunar.day}. It\'s vegan day!')
 
 async def other_day(lunar):
     await client.wait_until_ready()
-    channel = await client.fetch_user(int(266031018295689226))
+    channel = await client.fetch_user(int('DISCORD USER ID WITHOUT QUOTATION MARK'))
     await channel.send(f'Today lunar date is month {lunar.month}, and day {lunar.day}.')
 
 @client.event
@@ -39,7 +39,7 @@ async def isLunar():
         await other_day(lunar)
 
 while(True):
-    try: client.loop.run_until_complete(client.run('NzkzNjY4NzI2Nzk1OTI3NTcy.X-vnmg.-RCiG0VznvxtU8KpoGjNN_TvKm4'))
+    try: client.loop.run_until_complete(client.run('TOKEN'))
     except Exception:
         print("Reconnecting, please hold...")
         time.sleep(5)
