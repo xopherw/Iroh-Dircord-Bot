@@ -8,12 +8,12 @@ client = discord.Client()
 
 async def vegan_day(lunar, now):
     await client.wait_until_ready()
-    channel = await client.fetch_user(int('DISCORD USER ID WITHOUT QUOTATION MARK'))
+    channel = await client.fetch_user(int(266031018295689226))
     await channel.send(f'Today is month {lunar.month} and day {lunar.day}. It\'s vegan day!\nGregorian date is month {now.month}, and day {now.day}.')
 
 async def other_day(lunar, now):
     await client.wait_until_ready()
-    channel = await client.fetch_user(int('DISCORD USER ID WITHOUT QUOTATION MARK'))
+    channel = await client.fetch_user(int(266031018295689226))
     await channel.send(f'Today lunar date is month {lunar.month}, and day {lunar.day}.\nGregorian date is month {now.month}, and day {now.day}.')
 
 @client.event
