@@ -1,8 +1,10 @@
 import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, asyncio, os
 from discord.ext import tasks
+from dateutil import tz
 
 path = pathlib.Path('iroh.csv')
 iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
+asia = tz.gettz('Asia/Singapore')
 
 client = discord.Client()
 
@@ -23,7 +25,7 @@ async def on_message(message):
     if message.content == '!roh':
         response = random.choice(iroh_quotes)
         await message.channel.send(response)
-        print(dt.datetime.now().time())
+        print(dt.datetime.now(tz=asia).time())
 
 @client.event
 async def on_ready():
