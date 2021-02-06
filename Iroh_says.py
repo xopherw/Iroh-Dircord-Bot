@@ -25,7 +25,6 @@ async def on_message(message):
     if message.content == '!roh':
         response = random.choice(iroh_quotes)
         await message.channel.send(response)
-        print(dt.datetime.now(tz=asia).time())
 
 @client.event
 async def on_ready():
@@ -34,7 +33,7 @@ async def on_ready():
 
 @tasks.loop(minutes=1)
 async def isLunar():
-    now = dt.datetime.now()
+    now = dt.datetime.now(tz=asia)
     lunar = lc.Converter.Solar2Lunar(now)
     if(lunar.day in [1,15] and now.hour == 0 and now.minute == 1): 
         await vegan_day(lunar, now)
