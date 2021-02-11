@@ -5,6 +5,8 @@ path = pathlib.Path('iroh.csv')
 iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
 asia = tz.gettz('Asia/Singapore')
 
+open('user.json','w').write('{"dummy" : "dummy" }')
+
 client = discord.Client()
 
 @client.event
