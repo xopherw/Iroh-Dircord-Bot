@@ -31,7 +31,7 @@ async def on_ready():
 
 while(True):
     # try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
-    try: client.loop.run_until_complete(client.run('NzkzNjY4NzI2Nzk1OTI3NTcy.X-vnmg.5rE-4AXC7BHd_4bHAxXO35P54OM'))
+    try: client.loop.run_until_complete(client.run('TOKEN'))
 
     except Exception as e:
         print("Reconnecting, please hold...")
