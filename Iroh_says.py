@@ -21,7 +21,7 @@ async def on_message(message):
     # Iroh rolls dice
     if (re.match(r"^(\!roll) [0-9]{1,3}d[0-9]{1,3}$", message.content)):
         roll = [int(i) for i in message.content.split(' ')[-1].split('d')]
-        rolling(message, roll)
+        await rolling(message, roll)
 
     # Iroh start default timer
     if (re.match(r"^(\!roh timer)$", message.content)):
