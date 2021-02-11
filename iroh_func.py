@@ -31,7 +31,7 @@ This command will roll a dice for any RPG event or you lost your dice in your bo
 Let me show you how to use the command:
 
 `!roll 1d10` will generate one random number between 1 to 10
-returns: `@usernamme rolls 1d10 and gets 11.`
+returns: `@username rolls 1d10 and gets 11.`
 
 `!roll 3d10` will generate three random numbers between 1 to 10, and will also retrun the sum of the three dices numbers.
 returns: `@username rolls 3d20 and gets 24. [4, 10, 10]`
