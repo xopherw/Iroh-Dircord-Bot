@@ -22,7 +22,7 @@ async def on_message(message):
         id = message.author.id
         msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
         msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
-        await message.channel.send(f"{ msg1 if(len(msg1) > 2000) else  msg2 }  ")
+        await message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 }  ")
 
 @client.event
 async def on_ready():
