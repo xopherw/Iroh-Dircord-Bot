@@ -9,7 +9,7 @@ Hello, I am General Iroh. You may also know me as the Dragon of the West.
 No? It's more of demonstration really. But this is not why I am here for. 
 I am here to help you like how I helped my favorite nephew Zuko.
 
-**`!roh timer` command**
+**!roh timer command**
 To use the Pomodoro timer, you should use the `!roh timer` command. 
 By default, `!roh timer` will only give you 15 minutes.
 
@@ -21,10 +21,10 @@ When the timer is up, I will nudge you (in personal message) every 5 seconds.
 To stop that, just reply `!done` and it will stop.
 Furthermore, you can use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
 
-**`!roh` command**
+**!roh command**
 This command will return a random quote I have said from the Avatar show.
 
-**`!roll [number X]d[number Y]` command**
+**!roll [number X]d[number Y] command**
 This command will roll a dice for any RPG event or you lost your dice in your board game.
 Let me show you how to use the command:
 
