@@ -10,7 +10,10 @@ No? It's more of demonstration really. But this is not why I am here for.
 I am here to help you like how I helped my favorite nephew Zuko.
 
 
-**!roh timer command**
+**--------- !roh command: **
+This command will return a random quote I have said from the Avatar show.
+
+**--------- !roh timer command: **
 To use the Pomodoro timer, you should use the `!roh timer` command. By default, `!roh timer` will only give you 15 minutes.
 
 However, you can make your own timer from 0 to 99 mintues using command like this:
@@ -24,11 +27,7 @@ Just reply `!done` and it will stop.
 You can also use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
 
 
-**!roh command**
-This command will return a random quote I have said from the Avatar show.
-
-
-**!roll [number X]d[number Y] command**
+**--------- !roll [number X]d[number Y] command: **
 This command will roll a dice for any RPG event or you lost your dice in your board game.
 
 Let me show you how to use the command:
@@ -40,7 +39,7 @@ returns: `@usernamme rolls 1d10 and gets 11.`
 returns: `@username rolls 3d20 and gets 24. [4, 10, 10]`
 
 
-**More**
+**--------- More **
 There will be more functions to be added as my maker is gathering new idea for me. 
 So I hope you found some of my functions helpful!
 
