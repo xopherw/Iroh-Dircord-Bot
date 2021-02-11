@@ -9,23 +9,28 @@ Hello, I am General Iroh. You may also know me as the Dragon of the West.
 No? It's more of demonstration really. But this is not why I am here for. 
 I am here to help you like how I helped my favorite nephew Zuko.
 
+
 **!roh timer command**
-To use the Pomodoro timer, you should use the `!roh timer` command. 
-By default, `!roh timer` will only give you 15 minutes.
+To use the Pomodoro timer, you should use the `!roh timer` command. By default, `!roh timer` will only give you 15 minutes.
 
 However, you can make your own timer from 0 to 99 mintues using command like this:
 
 `!roh timer 40` for 40 minutes timer.
 
 When the timer is up, I will nudge you (in personal message) every 5 seconds. 
-To stop that, just reply `!done` and it will stop.
-Furthermore, you can use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
+
+Just reply `!done` and it will stop. 
+
+You can also use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
+
 
 **!roh command**
 This command will return a random quote I have said from the Avatar show.
 
+
 **!roll [number X]d[number Y] command**
 This command will roll a dice for any RPG event or you lost your dice in your board game.
+
 Let me show you how to use the command:
 
 `!roll 1d10` will generate one random number between 1 to 10
@@ -34,12 +39,12 @@ returns: `@usernamme rolls 1d10 and gets 11.`
 `!roll 3d10` will generate three random numbers between 1 to 10, and will also show you the sum of the three dices added up.
 returns: `@username rolls 3d20 and gets 24. [4, 10, 10]`
 
+
 **More**
 There will be more functions to be added as my maker is gathering new idea for me. 
 So I hope you found some of my functions helpful!
 
-When I'm not doing any task mentioned, I'll go make myself some tea...would you like one? 
-Sharing tea with a fascinating stranger is one of life's true delights. :tea:
+When I'm not doing any task, I'll go make myself some tea...would you like one? Sharing tea with a fascinating stranger is one of life's true delights. :tea:
 """
 
 
