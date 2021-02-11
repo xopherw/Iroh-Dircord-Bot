@@ -65,3 +65,10 @@ async def isLunar(client):
         await vegan_day(client, lunar, now)
     elif(now.hour == 0 and now.minute == 0):
         await other_day(client, lunar, now)
+
+def rolling(message, roll):
+    result = [random.randint(1,roll[-1]) for i in range(roll[0])]
+    id = message.author.id
+    msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
+    msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
+    await message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 }  ")
