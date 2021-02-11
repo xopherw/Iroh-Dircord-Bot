@@ -43,6 +43,8 @@ async def on_message(message):
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
     # Lunar Teller
+    activity = discord.Game(name="'!roh help' for info")
+    await client.change_presence(activity=activity)
     await isLunar.start(client)
 
 while(True):
