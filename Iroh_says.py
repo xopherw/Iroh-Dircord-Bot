@@ -1,4 +1,5 @@
 from iroh_func import *
+from timer_func import *
 
 path = pathlib.Path('iroh.csv')
 iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
@@ -15,7 +16,7 @@ async def on_message(message):
         response = random.choice(iroh_quotes)
         await message.channel.send(response)
     
-    # Iroh rolls
+    # Iroh rolls dice
     if (re.match(r"^(\!roll) [0-9]{1,3}d[0-9]{1,3}$", message.content)):
         roll = [int(i) for i in message.content.split(' ')[-1].split('d')]
         result = [random.randint(1,roll[-1]) for i in range(roll[0])]
@@ -23,6 +24,18 @@ async def on_message(message):
         msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
         msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
         await message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 }  ")
+
+    # Iroh start default timer
+    if (re.match(r"^(\!roh timer)$", message.content)):
+        await userCheck(client, 15, message)    
+    
+    # Iroh start customed timer
+    elif(re.match(r"^(\!roh timer) [0-9]{1,2}$", message.content)):
+        period = int(message.content.split(' ')[-1])
+        await userCheck(client, period, message)
+    
+    # Iroh help on commands
+    elif(message.content == "!roh help"): await message.channel.send(help)
 
 @client.event
 async def on_ready():
