@@ -71,4 +71,4 @@ async def rolling(message, roll):
     id = message.author.id
     msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
     msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
-    message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 } ")
+    return message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 } ")
