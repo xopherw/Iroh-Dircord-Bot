@@ -5,24 +5,38 @@ from dateutil import tz
 asia = tz.gettz('Asia/Singapore')
 
 help = """
-Hello, I am General Iroh. You may also know me as the Dragon of the West. No? It's more of demonstration really. 
-But this is not why I am here for. I am a utility tool for you. Here I have many functions like quoting all my Avatar quotes, set a timer, and rolling dices.
+Hello, I am General Iroh. You may also know me as the Dragon of the West. 
+No? It's more of demonstration really. But this is not why I am here for. 
+I am here to help you like how I helped my favorite nephew Zuko.
 
-To use the Pomodoro timer, you should use the `!roh timer` command. By default, `!roh timer` will only give you 15 minutes.
+**`!roh timer` command**
+To use the Pomodoro timer, you should use the `!roh timer` command. 
+By default, `!roh timer` will only give you 15 minutes.
+
 However, you can make your own timer from 0 to 99 mintues using command like this:
-`!timer start 40` for 40 minutes timer.\n
-When the timer is up, it will nudge you every 5 seconds. To stop that, just reply `!done` and it will stop.
+
+`!roh timer 40` for 40 minutes timer.
+
+When the timer is up, I will nudge you (in personal message) every 5 seconds. 
+To stop that, just reply `!done` and it will stop.
 Furthermore, you can use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
 
-If you like to brighten up your day with a quote, you may use the `!iroh` command. I will reply you a random quote from the Avatar show. 
+**`!roh` command**
+This command will return a random quote I have said from the Avatar show.
 
-If you have interest in dice rolling, you can use my `!roll` command too! 
-However to roll a dice, you need to mention numbers of dice, and numbers of sides on the dice. 
-Let me show you:
-`!roll 1d10` will generate one random number between 1 to 10.
+**`!roll [number X]d[number Y]` command**
+This command will roll a dice for any RPG event or you lost your dice in your board game.
+Let me show you how to use the command:
+
+`!roll 1d10` will generate one random number between 1 to 10
+returns: `@usernamme rolls 1d10 and gets 11.`
+
 `!roll 3d10` will generate three random numbers between 1 to 10, and will also show you the sum of the three dices added up.
+returns: `@username rolls 3d20 and gets 24. [4, 10, 10]`
 
-There will be more functions to be added as my maker is gathering idea for me. So I hope you found some of my functions helpful!
+**More**
+There will be more functions to be added as my maker is gathering new idea for me. 
+So I hope you found some of my functions helpful!
 
 When I'm not doing any task mentioned, I'll go make myself some tea...would you like one? 
 Sharing tea with a fascinating stranger is one of life's true delights. :tea:
