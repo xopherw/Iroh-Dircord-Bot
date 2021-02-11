@@ -37,7 +37,7 @@ async def on_message(message):
         await userCheck(client, period, message)
     
     # Iroh help on commands
-    elif(message.content == "!roh help"): await message.channel.send(embed=myEmbed)
+    elif(message.content == "!roh help"): await message.author.send(embed=myEmbed)
 
 @client.event
 async def on_ready():
