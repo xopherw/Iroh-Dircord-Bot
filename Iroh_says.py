@@ -33,6 +33,6 @@ while(True):
     # try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
     try: client.loop.run_until_complete(client.run('TOKEN'))
 
-    except Exception as e:
+    except Exception:
         print("Reconnecting, please hold...")
         time.sleep(5)
