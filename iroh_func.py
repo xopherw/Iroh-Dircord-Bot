@@ -61,10 +61,11 @@ async def other_day(client, lunar, now):
 async def isLunar(client):
     now = dt.datetime.now(tz=asia)
     lunar = lc.Converter.Solar2Lunar(now)
-    if(lunar.day in [1,15] and now.hour == 0 and now.minute == 1): 
-        await vegan_day(client, lunar, now)
-    else:
-        await other_day(client, lunar, now)
+    if(now.hour == 0 and now.minute == 1):
+        if(lunar.day in [1,15]): 
+            await vegan_day(client, lunar, now)
+        else:
+            await other_day(client, lunar, now)
 
 async def rolling(message, roll):
     result = [random.randint(1,roll[-1]) for i in range(roll[0])]
