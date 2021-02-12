@@ -63,7 +63,7 @@ async def isLunar(client):
     lunar = lc.Converter.Solar2Lunar(now)
     if(lunar.day in [1,15] and now.hour == 0 and now.minute == 1): 
         await vegan_day(client, lunar, now)
-    elif(now.hour == 0 and now.minute == 0):
+    else:
         await other_day(client, lunar, now)
 
 async def rolling(message, roll):
