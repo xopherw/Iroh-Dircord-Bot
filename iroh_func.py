@@ -1,4 +1,4 @@
-import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, os, re
+import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, os, re, itertools
 from discord.ext import tasks
 from dateutil import tz
 
@@ -68,8 +68,17 @@ async def isLunar(client):
             await other_day(client, lunar, now)
 
 async def rolling(message, roll):
-    result = [random.randint(1,roll[-1]) for i in range(roll[0])]
     id = message.author.id
-    msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
-    msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
+
+    if(len(roll) == 3):
+        mod = roll[-1]
+        result = [(random.randint(1,roll[-2]) + mod) for i in range(roll[0])]
+        msg1 = f"<@{id}> rolls {roll[0]}d{roll[-2]} {roll[-1]} and gets {sum(result)}."
+        msg2 = f"<@{id}> rolls {roll[0]}d{roll[-2]} {roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
+
+    else:    
+        result = [random.randint(1,roll[-1]) for i in range(roll[0])]
+        msg1 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}."
+        msg2 = f"<@{id}> rolls {roll[0]}d{roll[-1]} and gets {sum(result)}. " + f"{result if(len(result) > 1) else ''}"
+        
     return await message.channel.send(f"{ msg1 if(len(msg2) > 2000) else  msg2 } ")

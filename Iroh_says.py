@@ -19,8 +19,9 @@ async def on_message(message):
         await message.channel.send(response)
     
     # Iroh rolls dice
-    if (re.match(r"^(\!roll) [0-9]{1,3}d[0-9]{1,3}$", message.content)):
-        roll = [int(i) for i in message.content.split(' ')[-1].split('d')]
+    if (re.match(r"^(\!roll) [0-9]{1,3}d[0-9]{1,3}(\s(\+|\-)[0-9]{1,2})?$", message.content)):
+        rollnum = len([i for i in message.content.split(' ')])
+        roll = [int(i) for i in list(itertools.chain.from_iterable([i.split('d') for i in message.content.split(' ')][1:]))] if(rollnum == 3) else [int(i) for i in message.content.split(' ')[-1].split('d')] 
         await rolling(message, roll)
 
     # Iroh start default timer
@@ -45,7 +46,7 @@ async def on_ready():
 
 while(True):
     # try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
-    try: client.loop.run_until_complete(client.run('TOKEN'))
+    try: client.loop.run_until_complete(client.run('YOUR TOKEN'))
     except Exception:
         print("Reconnecting, please hold...")
         time.sleep(5)
