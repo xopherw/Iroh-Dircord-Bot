@@ -5,11 +5,11 @@ import json, asyncio
 
 # Perform a user check to prevent double timer set. If no existing user, continue to "async def timer"
 async def userCheck(client, period, message):
-    if(json.loads(open('user.json' , 'r').read()).get(str(message.author.id)) != None): 
-        await sender(message, "Only one timer is allowed. Stop & reset if necessary.")  
+    if(json.loads(open('user.json' , 'r').read()).get(str(message.author.id)) != None):
+        await sender(message, "Only one timer is allowed. Stop & reset if necessary.")
     else:
-        await sender(message, f"{period} minutes set! Focus on your element bend!" if(period != 15) else "No time set, default timer is 15 minutes! Focus on your element bend!") 
-        await timer(client, period, message) 
+        await sender(message, f"{period} minutes set! Focus on your element bend!" if(period != 15) else "No time set, default timer is 15 minutes! Focus on your element bend!")
+        await timer(client, period, message)
 
 # Does the countdown work as well as remove user once "stop" command is used, or "done" command when time is up.
 async def timer(client, period, message):
@@ -20,11 +20,11 @@ async def timer(client, period, message):
         def stop(m): return m.content == '!stop' and m.author.id == message.author.id
         await waiter(client, period * 60, stop)
         await sender(message, "Timer is stopped and reset.")
-        removeID(message.author.id) 
+        removeID(message.author.id)
 
     except asyncio.TimeoutError:
         while(True):
-            try: 
+            try:
                 await sender(message, 'Times Up!!!')
                 def done(m): return m.content == '!done' and m.author.id == message.author.id
                 await waiter(client, 5, done)
@@ -52,3 +52,6 @@ def removeID(id):
         open('user.json', 'w').write(json.dumps(temp_data))
     except:
         pass
+
+def demoPrint():
+    print("hahahah hi Hubert")
