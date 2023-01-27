@@ -1,5 +1,6 @@
 from iroh_func import *
 from timer_func import *
+import token
 
 path = pathlib.Path('iroh.csv')
 iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
@@ -46,7 +47,7 @@ async def on_ready():
 
 while(True):
     # try: client.loop.run_until_complete(client.run(os.getenv('TOKEN')))
-    try: client.loop.run_until_complete(client.run('YOUR TOKEN'))
+    try: client.loop.run_until_complete(client.run(token.api()))
     except Exception:
         print("Reconnecting, please hold...")
         time.sleep(5)
