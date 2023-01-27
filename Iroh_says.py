@@ -1,6 +1,6 @@
 from iroh_func import *
 from timer_func import *
-import token
+import api
 
 path = pathlib.Path('iroh.csv')
 iroh_quotes = pd.read_csv(path,header=None,sep='\n')[0].to_list()
