@@ -1,4 +1,4 @@
-import discord,random, pathlib, pandas as pd, time, datetime as dt, lunarcalendar as lc, os, re, itertools
+import discord,random, pathlib, time, datetime as dt, lunarcalendar as lc, os, re, itertools
 from discord.ext import tasks
 from dateutil import tz
 
@@ -13,8 +13,7 @@ I am here to help you like how I helped my favorite nephew Zuko.
 **"!roh" command: **
 This command will return a random quote I have said from the Avatar show.
 
-
-**"!roh timer" command: **
+ **"!roh timer" command: **
 By default, `!roh timer` will only give you 15 minutes.
 
 However, you can make your own timer from 0 to 99 mintues using command like this:
@@ -23,7 +22,6 @@ However, you can make your own timer from 0 to 99 mintues using command like thi
 When the timer is up, I will nudge you (in personal message) every 5 seconds. Just reply `!done` and it will stop. 
 
 You can also use `!stop` command to stop the timer in the middle of countdown, and timer will be reset.
-
 
 **"!roll [number X]d[number Y]" command: **
 This command will roll a dice for any RPG event or you lost your dice in your board game.
@@ -44,6 +42,7 @@ So I hope you found some of my functions helpful!
 When I'm not doing any task, I'll go make myself some tea...would you like one? Sharing tea with a fascinating stranger is one of life's true delights. :tea:
 """
 
+#
 
 myEmbed = discord.Embed(title="!roh command guide", description=help, color=0x00ff00)
 
